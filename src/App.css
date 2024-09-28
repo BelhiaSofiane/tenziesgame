@@ -49,9 +49,15 @@ body {
   cursor: pointer;
 }
 
+.grid-item:hover {
+  color: #3b7755;
+}
+
 .dice{
   font-size: 30px;
 }
+
+
 
 button{
   font-size: 30px;
@@ -61,6 +67,17 @@ button{
   padding: 10px 50px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+  background-color: #5035FF;
+  box-shadow: 0 1px #666;
+  transform: translateY(4px);
 }
 
 #is-held {

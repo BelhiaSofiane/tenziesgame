@@ -8,6 +8,7 @@ import Confetti from 'react-confetti'
 function App() {
   const [dice, setDice] = useState([]);
   const [tenzies, setTenzies] = useState(false)
+  const [count, setCount] = useState(0)
 
 
   //first render 
@@ -32,6 +33,7 @@ function App() {
   const resetGame = () => {
     setDice(prevDice => prevDice.map(die => (generateNewDie())))
     setTenzies(false)
+    setCount(count => count + 1)
   }
 
   //generate a new die 
@@ -97,7 +99,7 @@ function App() {
               ?<div><Confetti /> <button onClick={() => resetGame()}>New Game</button></div>
               :<button onClick={() => rollDice()}>Roll</button>
           }
-          
+          <h2>you WON {count} {tenzies > 1 ? 'Times' : 'Time'}</h2>
         </div>
       </main>
     </div>
