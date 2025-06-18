@@ -22,7 +22,7 @@ A fun and interactive dice game built with **React**! The goal is simple: roll u
 - [CSS Modules](https://github.com/css-modules/css-modules) – Scoped and maintainable styling
 
 ## 📸 Screenshots
-
+https://imgur.com/a/tenzies-Obv3qsO
 ![Tenzies Game Screenshot](https://imgur.com/a/tenzies-Obv3qsO)
 
 ## 📦 Installation
