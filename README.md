@@ -1,8 +1,34 @@
-# React + Vite
+# 🎲 Tenzies Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive dice game built with **React**! The goal is simple: roll until all ten dice show the same number. You can hold dice between rolls to strategically lock in values. The game tracks your roll count and time, making it both casual and competitive.
 
-Currently, two official plugins are available:
+## 🖥️ Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 [Play the game](https://smb-tenzies-game.netlify.app/)
+
+## 🚀 Features
+
+- 🎯 Roll until all dice match
+- 🖱️ Click to "hold" dice and prevent them from rolling
+- 🔁 Track number of rolls
+- ⏱️ Built-in timer to challenge yourself
+- 🥳 Win screen with celebration animation
+- 💡 Responsive design for desktop and mobile
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/) – Component-based UI
+- [Vite](https://vitejs.dev/) – Lightning-fast development environment
+- [CSS Modules](https://github.com/css-modules/css-modules) – Scoped and maintainable styling
+
+## 📸 Screenshots
+
+![Tenzies Game Screenshot](https://i.imgur.com/5OjTCeO.png)
+
+## 📦 Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/KunoSMB/tenziesgame.git
+cd tenziesgame
