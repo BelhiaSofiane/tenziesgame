@@ -21,8 +21,6 @@ A fun and interactive dice game built with **React**! The goal is simple: roll u
 - [Vite](https://vitejs.dev/) – Lightning-fast development environment
 - [CSS Modules](https://github.com/css-modules/css-modules) – Scoped and maintainable styling
 
-## 📸 Screenshots
-https://imgur.com/a/tenzies-Obv3qsO
 
 ## 📦 Installation
 
