@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import React from "react";
+import { useEffect, useState, useRef } from "react";
 import "./App.css";
 import Die from "./components/Die";
 import { nanoid } from "nanoid";
@@ -8,7 +7,7 @@ import Confetti from 'react-confetti'
 function App() {
   const [dice, setDice] = useState([]);
   const [tenzies, setTenzies] = useState(false)
-  const [count, setCount] = useState(0)
+
 
 
   //first render 
@@ -24,25 +23,32 @@ function App() {
 
   // winning condition and reset game 
   useEffect(() => {
+
     const allHeld = dice.every(die => die.isHeld)
     const allSameValue = dice.every(die => die.value === dice[0].value)
-    allHeld && allSameValue ? setTenzies(true) : setTenzies(false)
-  },[dice])
+
+    if (allHeld && allSameValue) {
+      setTenzies(true)
+    } else {
+      setTenzies(false)
+    }
+  }, [dice])
 
   // reset game 
   const resetGame = () => {
     setDice(prevDice => prevDice.map(die => (generateNewDie())))
     setTenzies(false)
-    setCount(count => count + 1)
   }
 
   //generate a new die 
   const generateNewDie = () => {
-    return { 
-      isHeld: false, 
-      value: Math.ceil(Math.random() * 6), 
-      id: nanoid() };
+    return {
+      isHeld: false,
+      value: Math.ceil(Math.random() * 6),
+      id: nanoid()
+    };
   };
+  // toggle the isHeld state of a die when clicked
   const holdDice = (id) => {
     setDice((prevDice) =>
       prevDice.map((die) =>
@@ -65,10 +71,9 @@ function App() {
   };
 
 
-// generate and set a new array of 10 dice, each with a random value and unique ID
+  // generate and set a new array of 10 dice, each with a random value and unique ID
   const allNewDice = () => {
-    
-    setDice(prevDice =>{ 
+    setDice(prev => {
       const arr = []
       for (let i = 0; i < 10; i++) {
         arr.push(generateNewDie());
@@ -95,11 +100,15 @@ function App() {
           <p>Roll until all dice are the same. Click each die to freeze it at its current value between rolls.</p>
           <div className="grid-container">{diceElement}</div>
           {
-            tenzies === true 
-              ?<div><Confetti /> <button onClick={() => resetGame()}>New Game</button></div>
-              :<button onClick={() => rollDice()}>Roll</button>
+            tenzies === true
+              ? <div><Confetti />
+                <button onClick={() => resetGame()}>
+                  New Game
+                </button>
+                <p>Press to Start a New Game</p>
+              </div>
+              : <button onClick={() => rollDice()}>Roll</button>
           }
-          <h2>you WON {count} {tenzies > 1 ? 'Times' : 'Time'}</h2>
         </div>
       </main>
     </div>
