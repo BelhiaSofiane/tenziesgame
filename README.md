@@ -4,7 +4,7 @@ A fun and interactive dice game built with **React**! The goal is simple: roll u
 
 ## 🖥️ Live Demo
 
-👉 [Play the game](https://smb-tenzies-game.netlify.app/)
+👉 [Play the game](https://dice-luck.netlify.app/)
 
 ## 🚀 Features
 
